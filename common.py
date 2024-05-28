@@ -7,7 +7,7 @@ from openai import OpenAI
 load_dotenv()
 
 class Model: 
-    basic: str = "gpt-3.5-turbo-1106"
+    basic: str = "gpt-4o"
     advanced: str = "gpt-4-1106-preview"
 
 

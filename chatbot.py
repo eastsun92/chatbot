@@ -8,7 +8,7 @@ class Chatbot:
         self.context = [{"role": "system", "content": system_role}]
         self.model = model
         self.instruction = instruction
-        self.max_token_size = 16 * 1024
+        self.max_token_size = 128000
         self.available_token_rate = 0.9
 
     def add_user_message(self, user_message):
@@ -21,7 +21,7 @@ class Chatbot:
                 messages=self.context,
                 temperature=0.5,
                 top_p=1,
-                max_tokens=1024,
+                max_tokens=4096,
                 frequency_penalty=0,
                 presence_penalty=0
             ).model_dump()
